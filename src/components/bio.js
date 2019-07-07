@@ -16,7 +16,7 @@ const Bio = () => {
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50) {
+          fixed(width: 100, height: 100) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -46,7 +46,7 @@ const Bio = () => {
         style={{
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
-          minWidth: 50,
+          minWidth: 100,
           borderRadius: `100%`,
         }}
         imgStyle={{
@@ -54,11 +54,14 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong> who lives and works in San
-        Francisco building useful things.
+        <strong>{author}</strong> is a software engineer and instructor, focused
+        on frontend performance and the craft of software since 2003. Mike makes
+        it easier to Get Things Done on the web. He's contributed to many
+        popular open source projects including npm, webpack, jQuery, ESLint, and
+        JSCS. He lives in New York with his wife and 2 children.
         {` `}
         <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
+          Follow him on Twitter
         </a>
       </p>
     </div>
