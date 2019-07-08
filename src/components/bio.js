@@ -26,6 +26,8 @@ const Bio = () => {
           author
           social {
             twitter
+            github
+            slides
           }
         }
       }
@@ -37,7 +39,7 @@ const Bio = () => {
     <div
       style={{
         display: `flex`,
-        marginBottom: rhythm(2.5),
+        marginBottom: rhythm(0.25),
       }}
     >
       <Image
@@ -53,15 +55,23 @@ const Bio = () => {
           borderRadius: `50%`,
         }}
       />
-      <p>
+      <p style={{ textAlign: "justify" }}>
         <strong>{author}</strong> is a software engineer and instructor, focused
         on frontend performance and the craft of software since 2003. Mike makes
         it easier to Get Things Done on the web. He's contributed to many
         popular open source projects including npm, webpack, jQuery, ESLint, and
         JSCS. He lives in New York with his wife and 2 children.
         {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          Follow him on Twitter
+        <a href={`https://twitter.com/${social.twitter}`} target="_blank">
+          Twitter
+        </a>
+        {` `}
+        <a href={`https://github.com/${social.github}`} target="_blank">
+          Github
+        </a>
+        {` `}
+        <a href={`https://slides.com/${social.slides}`} target="_blank">
+          Slides.com
         </a>
       </p>
     </div>

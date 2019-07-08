@@ -2,10 +2,12 @@ module.exports = {
   siteMetadata: {
     title: `Mike Sherov`,
     author: `Mike Sherov`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Mike Sherov's personal website and blog`,
     siteUrl: `http://mike.sherov.com/`,
     social: {
       twitter: `mikesherov`,
+      github: `mikesherov`,
+      slides: `mikesherov`,
     },
   },
   plugins: [
@@ -63,7 +65,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/profile-pic.jpg`,
       },
     },
     `gatsby-plugin-offline`,

@@ -35,7 +35,7 @@ class Layout extends React.Component {
           <Link style={subnavLinkStyles} to={`/about`}>
             About
           </Link>
-          <Link style={subnavLinkStyles} to={`/posts`}>
+          <Link style={subnavLinkStyles} to={`/blog`}>
             Posts
           </Link>
         </nav>
