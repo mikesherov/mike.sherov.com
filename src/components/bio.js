@@ -62,15 +62,27 @@ const Bio = () => {
         popular open source projects including npm, webpack, jQuery, ESLint, and
         JSCS. He lives in New York with his wife and 2 children.
         {` `}
-        <a href={`https://twitter.com/${social.twitter}`} target="_blank">
+        <a
+          href={`https://twitter.com/${social.twitter}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Twitter
         </a>
         {` `}
-        <a href={`https://github.com/${social.github}`} target="_blank">
+        <a
+          href={`https://github.com/${social.github}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Github
         </a>
         {` `}
-        <a href={`https://slides.com/${social.slides}`} target="_blank">
+        <a
+          href={`https://slides.com/${social.slides}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Slides.com
         </a>
       </p>
