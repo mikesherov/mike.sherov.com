@@ -1,6 +1,6 @@
 ---
 title: Writing Clear Code, Not Clever Code
-date: "2012-04-15T00:00:0.000Z"
+date: "2012-04-15T00:00:00.000Z"
 description: ""
 ---
 
