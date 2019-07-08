@@ -27,6 +27,7 @@ const Bio = () => {
           social {
             twitter
             github
+            devto
             slides
           }
         }
@@ -76,6 +77,14 @@ const Bio = () => {
           rel="noopener noreferrer"
         >
           Github
+        </a>
+        {` `}
+        <a
+          href={`https://dev.to/${social.devto}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          dev.to
         </a>
         {` `}
         <a
