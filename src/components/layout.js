@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Newsletter from "./newsletter"
 
 import { rhythm } from "../utils/typography"
 
@@ -53,7 +54,14 @@ class Layout extends React.Component {
       >
         {pageHeader}
         <main>{children}</main>
-        <footer>© {new Date().getFullYear()}, Mike Sherov</footer>
+        <footer>
+          <hr
+            style={{
+              marginBottom: rhythm(1),
+            }}
+          />
+          <Newsletter /> © {new Date().getFullYear()}, Mike Sherov
+        </footer>
       </div>
     )
   }
