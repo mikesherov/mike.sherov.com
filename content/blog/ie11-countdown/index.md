@@ -85,4 +85,4 @@ Lastly, you can advocate for automatic upgrades on social media using the #killI
 
 If we are successful, we will look back and say "Microsoft killed IE11 with automatic upgrades to Edge." Finally, we will stop compiling to ES5, and in some cases, stop compiling altogether. Finally, we will stop sending unnecessarily polyfills to browsers that don’t need them. Finally, we will have ES6 everywhere. **Finally, Internet Explorer will be dead.**
 
-_Thanks to [Fred K. Schott](https://twitter.com/FredKSchott) and [Brian Kardell](https://twitter.com/briankardell) for invaluable early feedback on this article._
+_Thanks to [Fred K. Schott](https://twitter.com/FredKSchott) and [Brian Kardell](https://twitter.com/briankardell) for invaluable early feedback on this post._
