@@ -77,5 +77,17 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: "gatsby-source-apiserver",
+      options: {
+        typePrefix: "Egghead",
+        url: `https://egghead.io/api/v1/instructors/mike-sherov/lessons`,
+        method: "get",
+        name: `lessons`,
+        verboseOutput: true,
+        enableDevRefresh: true,
+        refreshId: `id`,
+      },
+    },
   ],
 }
