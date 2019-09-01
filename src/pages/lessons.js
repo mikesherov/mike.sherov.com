@@ -19,15 +19,7 @@ class Lessons extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Lessons" />
         {lessons.map(
-          ({ title, summary, published_at, http_url, alternative_id }) => {
-            const date = new Date(Date.parse(published_at)).toLocaleDateString(
-              "default",
-              {
-                month: "long",
-                day: "numeric",
-                year: "numeric",
-              }
-            )
+          ({ title, summary, duration, tags, http_url, alternative_id }) => {
             return (
               <div key={alternative_id}>
                 <h3
@@ -44,7 +36,18 @@ class Lessons extends React.Component {
                     {title}
                   </a>
                 </h3>
-                <small>{date}</small>
+                <small style={{ marginRight: "15px" }}>
+                  <span role="img" aria-label="duration">
+                    🕒
+                  </span>
+                  {new Date(1000 * duration).toISOString().substr(14, 5)}{" "}
+                </small>
+                <small>
+                  <span role="img" aria-label="tags">
+                    🏷️
+                  </span>
+                  {tags.map(({ label }) => label).join(", ")}
+                </small>
                 <p>{summary}</p>
               </div>
             )
@@ -72,7 +75,10 @@ export const pageQuery = graphql`
           state
           http_url
           summary
-          published_at
+          duration
+          tags {
+            label
+          }
         }
       }
     }
