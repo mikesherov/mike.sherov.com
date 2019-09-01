@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { rhythm } from "../utils/typography"
+import PostMeta from "./postMeta"
 
 export default ({ node }) => {
   const title = node.frontmatter.title || node.fields.slug
@@ -15,7 +16,7 @@ export default ({ node }) => {
           {title}
         </Link>
       </h3>
-      <small>{node.frontmatter.date}</small>
+      <PostMeta post={node} />
       <p
         dangerouslySetInnerHTML={{
           __html: node.frontmatter.description || node.excerpt,

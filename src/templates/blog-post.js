@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import PostMeta from "../components/postMeta"
 import { rhythm, scale } from "../utils/typography"
 
 class BlogPostTemplate extends React.Component {
@@ -19,20 +20,19 @@ class BlogPostTemplate extends React.Component {
         <h1
           style={{
             marginTop: rhythm(1),
-            marginBottom: 0,
+            marginBottom: rhythm(0.5),
           }}
         >
           {post.frontmatter.title}
         </h1>
-        <p
+        <PostMeta
           style={{
             ...scale(-1 / 5),
             display: `block`,
             marginBottom: rhythm(1),
           }}
-        >
-          {post.frontmatter.date}
-        </p>
+          post={post}
+        />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </Layout>
     )
@@ -53,6 +53,11 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      fields {
+        readingTime {
+          text
+        }
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
