@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 import PostMeta from "./postMeta"
 
@@ -25,3 +25,23 @@ export default ({ node }) => {
     </div>
   )
 }
+
+export const query = graphql`
+  fragment Posts on Query {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          ...PostMeta
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            description
+          }
+        }
+      }
+    }
+  }
+`

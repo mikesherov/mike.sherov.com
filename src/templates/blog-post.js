@@ -53,14 +53,9 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
-      fields {
-        readingTime {
-          text
-        }
-      }
+      ...PostMeta
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
         description
       }
     }

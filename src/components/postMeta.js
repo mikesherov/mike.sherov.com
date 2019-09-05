@@ -18,3 +18,16 @@ export default ({ post, style }) => {
     </small>
   )
 }
+
+export const query = graphql`
+  fragment PostMeta on MarkdownRemark {
+    fields {
+      readingTime {
+        text
+      }
+    }
+    frontmatter {
+      date(formatString: "MMMM DD, YYYY")
+    }
+  }
+`
