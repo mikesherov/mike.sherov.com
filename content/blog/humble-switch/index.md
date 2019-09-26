@@ -45,7 +45,7 @@ function speak(animalType) {
 }
 ```
 
-In this snippet above, both `"dog"` and `"cat"` are strings literals, but that doesn't have to be the case. The JS spec says that SwitchCase tests can be any expression, even function calls. Let's rewrite our SwitchStatement to use function calls:
+In this snippet above, both `"dog"` and `"cat"` are string literals, but that doesn't have to be the case. The JS spec says that SwitchCase tests can be any expression, even function calls. Let's rewrite our SwitchStatement to use function calls:
 
 ```js
 const getDogType = () => "dog"
@@ -93,12 +93,12 @@ Notice that `case 3` is not in the output, because SwitchCase tests are executed
 function accessControlStatusCode(user, request) {
   switch(true) {
     case request.isForbidden():
-      return 403;
+      return 403
     case !user.isLoggedIn():
     case !user.isAuthorized(request):
-      return 401;
+      return 401
     default:
-      return 200;
+      return 200
   }
 ```
 
@@ -134,7 +134,7 @@ Our rule still holds! SwitchCase tests are only executed until one strictly equa
 
 ## Fallthrough
 
-Several of the examples we've seen so far contain fallthroughs. At first glance, fallthrough just looks like one giant bug waiting to happen. With fallthrough, consequents that don't end in a control flow statement like `break;` will then execute the next `consequent`, which is often a bug:
+Several of the examples we've seen so far contain fallthroughs. At first glance, fallthrough just looks like one giant bug waiting to happen. With fallthrough, consequents that don't end in a control flow statement like `break` will then execute the next consequent, which is often a bug:
 
 ```js
 function speak(animal) {
