@@ -3,7 +3,7 @@ module.exports = {
     title: `Mike Sherov`,
     author: `Mike Sherov`,
     description: `Mike Sherov's personal website and blog`,
-    siteUrl: `http://mike.sherov.com/`,
+    siteUrl: `https://mike.sherov.com/`,
     social: {
       devto: `mikesherov`,
       twitter: `mikesherov`,
@@ -77,6 +77,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
