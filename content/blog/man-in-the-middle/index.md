@@ -22,4 +22,4 @@ Because there are so many different web hosting providers, many different web se
 
 MITM based session hijacking attacks are a real threat to web users. Their prevalence has increased in the age of free public WiFi, and there are many documented, high profile exploits like Firesheep demonstrating their power. Thankfully, serving websites completely over https solves this specific exploit in a free, fast, and secure way. It may take some work to figure it out, but ultimately it's worth it knowing your users will have one less thing to worry about when using your site.
 
-_Thanks to [Adam Rackis](https://twitter.com/AdamRackis), [Gabriel McAdams](https://twitter.com/ghmcadams), and [Lars Moelleken](https://twitter.com/suckup_de) for invaluable early feedback on this post._
+_Thanks to_ [Adam Rackis](https://twitter.com/AdamRackis), [Gabriel McAdams](https://twitter.com/ghmcadams), and [Lars Moelleken](https://twitter.com/suckup_de) _for invaluable early feedback on this post._
